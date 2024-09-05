@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 5px 0;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+        {{#each products}}
+            <li>
+                <h2>{{this.name}}</h2>
+                <p>Precio: {{this.price}} USD</p>
+                <p>Categoría: {{this.category}}</p>
+                <p>Descripción: {{this.description}}</p>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
